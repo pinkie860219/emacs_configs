@@ -3,6 +3,8 @@
 (package-initialize)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (add-to-list 'package-archives '("melpa-stable" . "http://stable.melpa.org/packages/") t)
+(when (< emacs-major-version 24)
+  (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
 
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
@@ -33,7 +35,8 @@
  '(custom-safe-themes
    (quote
     ("a56cc18045d90be8f770ae409fc86274f8e5de2999a16b604ff84f8015e8d1e5" "3b36631f95ebfd9ec35f382249ad861f3b3d51f8bed4882184ec8745deaada28" default)))
- '(package-selected-packages (quote (auto-complete golden-ratio))))
+ '(org-agenda-files (quote ("~/Desktop/todo.org")))
+ '(package-selected-packages (quote (js2-mode rjsx-mode auto-complete golden-ratio))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -44,3 +47,16 @@
 
 (require 'golden-ratio)
 (golden-ratio-mode 1)
+
+(setq c-default-style "linux"
+      c-basic-offset 4)
+
+(setq make-backup-files nil) ; stop creating backup~ files
+
+
+;;load module for org to export to markdown
+(eval-after-load "org"
+  '(require 'ox-md nil t))
+;;smooth scrolling
+(setq scroll-step            1
+      scroll-conservatively  10000)
