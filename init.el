@@ -12,9 +12,25 @@
 ;; You may delete these explanatory comments.
 (package-initialize)
 
+;;;;;;;;基本設定;;;;;;;
+
+;;取消自動備份
+(setq make-backup-files nil) ; stop creating backup~ files
+
+
+;;smooth scrolling
+(setq scroll-step            1
+      scroll-conservatively  10000)
+
+
+;;buffer 管理器
 (require 'ibuffer)
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
+
+;;分割視窗操作
+(require 'golden-ratio)
+(golden-ratio-mode 1)
 
 (global-set-key (kbd "M-S") 'windmove-up)
 (global-set-key (kbd "M-X") 'windmove-down)
@@ -24,6 +40,8 @@
 (global-set-key (kbd "<f11>") (lambda () (interactive) (other-frame 1)))
 (global-set-key (kbd "<f12>") (lambda () (interactive) (other-frame 1)))
 
+
+;;顏色主題設定
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 (load-theme 'zenburn t)
 
@@ -45,18 +63,18 @@
  )
 
 
-(require 'golden-ratio)
-(golden-ratio-mode 1)
+;;;;;;;program;;;;;;;;;;;;
 
+;;設定c語言的縮排為4個空白
 (setq c-default-style "linux"
       c-basic-offset 4)
 
-(setq make-backup-files nil) ; stop creating backup~ files
+;;;;;;;/program;;;;;;;;;;;;
 
+;;;;;;;org;;;;;;;;;;;;;;;;;
 
 ;;load module for org to export to markdown
 (eval-after-load "org"
   '(require 'ox-md nil t))
-;;smooth scrolling
-(setq scroll-step            1
-      scroll-conservatively  10000)
+
+;;;;;;;/org;;;;;;;;;;;;;;;;;
