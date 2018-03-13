@@ -12,6 +12,8 @@
 ;; You may delete these explanatory comments.
 (package-initialize)
 
+;;magit
+(global-set-key (kbd "C-x g") 'magit-status)
 ;;;;;;;;基本設定;;;;;;;
 
 ;;取消自動備份
@@ -54,7 +56,9 @@
    (quote
     ("a56cc18045d90be8f770ae409fc86274f8e5de2999a16b604ff84f8015e8d1e5" "3b36631f95ebfd9ec35f382249ad861f3b3d51f8bed4882184ec8745deaada28" default)))
  '(org-agenda-files (quote ("~/Desktop/todo.org")))
- '(package-selected-packages (quote (js2-mode rjsx-mode auto-complete golden-ratio))))
+ '(package-selected-packages
+   (quote
+    (magit go-mode rainbow-delimiters js2-mode rjsx-mode auto-complete golden-ratio))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -78,3 +82,8 @@
   '(require 'ox-md nil t))
 
 ;;;;;;;/org;;;;;;;;;;;;;;;;;
+
+;;;;;;;rc-config;;;;;;;;;;;;
+(add-to-list 'load-path "~/.emacs.d/rc")
+(require 'rc-open-todo)
+;;;;;;/rc-config;;;;;;;;;;;;
