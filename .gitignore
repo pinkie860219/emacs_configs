@@ -1,0 +1,20 @@
+# directory
+/auto-save-list/
+/el-get/
+/elpa/
+/eshell/history
+/eshell/lastdir
+/image-dired/
+/info/
+/thumbs/
+/url/
+# files
+*~
+*.elc
+/abbrev_defs
+/ac-comphist.dat
+/bbdb.el
+/bookmarks
+/custom.el
+/places.el
+/tramp
