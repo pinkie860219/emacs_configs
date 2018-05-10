@@ -12,9 +12,16 @@
 ;; You may delete these explanatory comments.
 (package-initialize)
 
+;;auto-complete
+(ac-config-default)
+
 ;;magit
 (global-set-key (kbd "C-x g") 'magit-status)
 ;;;;;;;;基本設定;;;;;;;
+
+;;括號配對標亮
+(show-paren-mode 1)
+(setq show-paren-delay 0)
 
 ;;取消自動備份
 (setq make-backup-files nil) ; stop creating backup~ files
