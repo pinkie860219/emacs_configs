@@ -13,6 +13,7 @@
 (package-initialize)
 
 ;;auto-complete
+(require 'auto-complete)
 (ac-config-default)
 
 ;;magit
