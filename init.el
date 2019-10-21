@@ -6,7 +6,6 @@
  '(custom-safe-themes
    (quote
     ("151bde695af0b0e69c3846500f58d9a0ca8cb2d447da68d7fbf4154dcf818ebc" "93a0885d5f46d2aeac12bf6be1754faa7d5e28b27926b8aa812840fe7d0b7983" "d1b4990bd599f5e2186c3f75769a2c5334063e9e541e37514942c27975700370" "f0dc4ddca147f3c7b1c7397141b888562a48d9888f1595d69572db73be99a024" "6b2636879127bf6124ce541b1b2824800afc49c6ccd65439d6eb987dbf200c36" "e61752b5a3af12be08e99d076aedadd76052137560b7e684a8be2f8d2958edc3" "a12ec87ff9e72a9561314c7ae2c82a373e1b7c80d0fe15579e282080c8d5aef2" "0dd2666921bd4c651c7f8a724b3416e95228a13fca1aa27dc0022f4e023bf197" "a56cc18045d90be8f770ae409fc86274f8e5de2999a16b604ff84f8015e8d1e5" "3b36631f95ebfd9ec35f382249ad861f3b3d51f8bed4882184ec8745deaada28" default)))
- '(org-agenda-files (quote ("~/Desktop/todo.org")))
  '(package-selected-packages
    (quote
     (sr-speedbar material-theme smooth-scrolling magit go-mode rainbow-delimiters js2-mode rjsx-mode auto-complete golden-ratio))))
@@ -16,7 +15,6 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
-
 
 ;; package.el 相關設定
 (require 'package)
@@ -117,8 +115,3 @@
   '(require 'ox-md nil t))
 
 ;;;;;;;/org;;;;;;;;;;;;;;;;;
-
-;;;;;;;rc-config;;;;;;;;;;;;
-(add-to-list 'load-path "~/.emacs.d/rc")
-;;(require 'rc-open-todo)
-;;;;;;/rc-config;;;;;;;;;;;;
